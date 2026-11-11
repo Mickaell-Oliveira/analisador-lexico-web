@@ -1,0 +1,591 @@
+<AFD>
+
+	<simbolos>
+		<elemento valor="A"/>
+		<elemento valor="B"/>
+		<elemento valor="C"/>
+		<elemento valor="D"/>
+		<elemento valor="E"/>
+		<elemento valor="F"/>
+		<elemento valor="G"/>
+		<elemento valor="H"/>
+		<elemento valor="I"/>
+		<elemento valor="J"/>
+		<elemento valor="K"/>
+		<elemento valor="L"/>
+		<elemento valor="M"/>
+		<elemento valor="N"/>
+		<elemento valor="O"/>
+		<elemento valor="P"/>
+		<elemento valor="Q"/>
+		<elemento valor="R"/>
+		<elemento valor="S"/>
+		<elemento valor="T"/>
+		<elemento valor="U"/>
+		<elemento valor="V"/>
+		<elemento valor="W"/>
+		<elemento valor="X"/>
+		<elemento valor="Y"/>
+		<elemento valor="Z"/>
+		<elemento valor="k"/>
+		<elemento valor="m"/>
+		<elemento valor="h"/>
+		<elemento valor="0"/>
+		<elemento valor="1"/>
+		<elemento valor="2"/>
+		<elemento valor="3"/>
+		<elemento valor="4"/>
+		<elemento valor="5"/>
+		<elemento valor="6"/>
+		<elemento valor="7"/>
+		<elemento valor="8"/>
+		<elemento valor="9"/>
+		<elemento valor="-"/>
+		<elemento valor="#"/>
+		<elemento valor="$"/>
+		<elemento valor="."/>
+		<elemento valor=","/>
+		<elemento valor=":"/>
+		<elemento valor="/"/>
+		<elemento valor=" "/>
+		<elemento valor="\n"/>
+	</simbolos>
+
+	<estados>
+		<elemento valor="1"/>
+		<elemento valor="q_R"/>
+		<elemento valor="q_L1"/>
+		<elemento valor="q_L2"/>
+		<elemento valor="q_L3"/>
+		<elemento valor="q_PA0"/>
+		<elemento valor="q_PA1"/>
+		<elemento valor="q_PA2"/>
+		<elemento valor="q_PA3"/>
+		<elemento valor="q_PA_FIM"/>
+		<elemento valor="q_PM1"/>
+		<elemento valor="q_PM2"/>
+		<elemento valor="q_PM3"/>
+		<elemento valor="q_PM_FIM"/>
+		<elemento valor="q_REG0"/>
+		<elemento valor="q_REG1"/>
+		<elemento valor="q_REG2"/>
+		<elemento valor="q_REG3"/>
+		<elemento valor="q_REG4"/>
+		<elemento valor="q_REG5"/>
+		<elemento valor="q_REG6"/>
+		<elemento valor="q_REG7"/>
+		<elemento valor="q_REG8"/>
+		<elemento valor="q_REG_FIM"/>
+		<elemento valor="q_RS"/>
+		<elemento valor="q_VAL_Z"/>
+		<elemento valor="q_VI1"/>
+		<elemento valor="q_VI2"/>
+		<elemento valor="q_VI3"/>
+		<elemento valor="q_VM0"/>
+		<elemento valor="q_VM1"/>
+		<elemento valor="q_VM2"/>
+		<elemento valor="q_VAL_P"/>
+		<elemento valor="q_VAL_D1"/>
+		<elemento valor="q_VAL_FIM"/>
+		<elemento valor="q_D01"/>
+		<elemento valor="q_D2"/>
+		<elemento valor="q_HH"/>
+		<elemento valor="q_H_DP"/>
+		<elemento valor="q_H_M1"/>
+		<elemento valor="q_HORA_FIM"/>
+		<elemento valor="q_VEL_D"/>
+		<elemento valor="q_VK"/>
+		<elemento valor="q_VKM"/>
+		<elemento valor="q_VBAR"/>
+		<elemento valor="q_VEL_FIM"/>
+		<elemento valor="F_PLACA_ANT"/>
+		<elemento valor="F_PLACA_MER"/>
+		<elemento valor="F_REGISTRO"/>
+		<elemento valor="F_VELOCIDADE"/>
+		<elemento valor="F_VALOR"/>
+		<elemento valor="F_HORARIO"/>
+	</estados>
+
+	<estadosFinais>
+		<elemento valor="F_PLACA_ANT"/>
+		<elemento valor="F_PLACA_MER"/>
+		<elemento valor="F_REGISTRO"/>
+		<elemento valor="F_VELOCIDADE"/>
+		<elemento valor="F_VALOR"/>
+		<elemento valor="F_HORARIO"/>
+	</estadosFinais>
+
+	<funcaoPrograma>
+		<elemento origem="1" destino="1" simbolo=" "/>
+		<elemento origem="1" destino="1" simbolo="\n"/>
+		<elemento origem="1" destino="q_R" simbolo="R"/>
+		<elemento origem="1" destino="q_L1" simbolo="A"/>
+		<elemento origem="1" destino="q_L1" simbolo="B"/>
+		<elemento origem="1" destino="q_L1" simbolo="C"/>
+		<elemento origem="1" destino="q_L1" simbolo="D"/>
+		<elemento origem="1" destino="q_L1" simbolo="E"/>
+		<elemento origem="1" destino="q_L1" simbolo="F"/>
+		<elemento origem="1" destino="q_L1" simbolo="G"/>
+		<elemento origem="1" destino="q_L1" simbolo="H"/>
+		<elemento origem="1" destino="q_L1" simbolo="I"/>
+		<elemento origem="1" destino="q_L1" simbolo="J"/>
+		<elemento origem="1" destino="q_L1" simbolo="K"/>
+		<elemento origem="1" destino="q_L1" simbolo="L"/>
+		<elemento origem="1" destino="q_L1" simbolo="M"/>
+		<elemento origem="1" destino="q_L1" simbolo="N"/>
+		<elemento origem="1" destino="q_L1" simbolo="O"/>
+		<elemento origem="1" destino="q_L1" simbolo="P"/>
+		<elemento origem="1" destino="q_L1" simbolo="Q"/>
+		<elemento origem="1" destino="q_L1" simbolo="S"/>
+		<elemento origem="1" destino="q_L1" simbolo="T"/>
+		<elemento origem="1" destino="q_L1" simbolo="U"/>
+		<elemento origem="1" destino="q_L1" simbolo="V"/>
+		<elemento origem="1" destino="q_L1" simbolo="W"/>
+		<elemento origem="1" destino="q_L1" simbolo="X"/>
+		<elemento origem="1" destino="q_L1" simbolo="Y"/>
+		<elemento origem="1" destino="q_L1" simbolo="Z"/>
+		<elemento origem="1" destino="q_REG0" simbolo="#"/>
+		<elemento origem="1" destino="q_D01" simbolo="0"/>
+		<elemento origem="1" destino="q_D01" simbolo="1"/>
+		<elemento origem="1" destino="q_D2" simbolo="2"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="3"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="4"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="5"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="6"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="7"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="8"/>
+		<elemento origem="1" destino="q_VEL_D" simbolo="9"/>
+		<elemento origem="q_R" destino="q_RS" simbolo="$"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="A"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="B"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="C"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="D"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="E"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="F"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="G"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="H"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="I"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="J"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="K"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="L"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="M"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="N"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="O"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="P"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="Q"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="R"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="S"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="T"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="U"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="V"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="W"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="X"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="Y"/>
+		<elemento origem="q_R" destino="q_L2" simbolo="Z"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="A"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="B"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="C"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="D"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="E"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="F"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="G"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="H"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="I"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="J"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="K"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="L"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="M"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="N"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="O"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="P"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="Q"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="R"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="S"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="T"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="U"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="V"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="W"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="X"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="Y"/>
+		<elemento origem="q_L1" destino="q_L2" simbolo="Z"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="A"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="B"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="C"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="D"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="E"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="F"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="G"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="H"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="I"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="J"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="K"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="L"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="M"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="N"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="O"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="P"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="Q"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="R"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="S"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="T"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="U"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="V"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="W"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="X"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="Y"/>
+		<elemento origem="q_L2" destino="q_L3" simbolo="Z"/>
+		<elemento origem="q_L3" destino="q_PA0" simbolo="-"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="0"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="1"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="2"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="3"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="4"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="5"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="6"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="7"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="8"/>
+		<elemento origem="q_L3" destino="q_PM1" simbolo="9"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="0"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="1"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="2"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="3"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="4"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="5"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="6"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="7"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="8"/>
+		<elemento origem="q_PA0" destino="q_PA1" simbolo="9"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="0"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="1"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="2"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="3"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="4"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="5"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="6"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="7"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="8"/>
+		<elemento origem="q_PA1" destino="q_PA2" simbolo="9"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="0"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="1"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="2"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="3"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="4"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="5"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="6"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="7"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="8"/>
+		<elemento origem="q_PA2" destino="q_PA3" simbolo="9"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="0"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="1"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="2"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="3"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="4"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="5"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="6"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="7"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="8"/>
+		<elemento origem="q_PA3" destino="q_PA_FIM" simbolo="9"/>
+		<elemento origem="q_PA_FIM" destino="F_PLACA_ANT" simbolo=" "/>
+		<elemento origem="q_PA_FIM" destino="F_PLACA_ANT" simbolo="\n"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="A"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="B"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="C"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="D"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="E"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="F"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="G"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="H"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="I"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="J"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="K"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="L"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="M"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="N"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="O"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="P"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="Q"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="R"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="S"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="T"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="U"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="V"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="W"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="X"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="Y"/>
+		<elemento origem="q_PM1" destino="q_PM2" simbolo="Z"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="0"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="1"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="2"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="3"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="4"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="5"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="6"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="7"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="8"/>
+		<elemento origem="q_PM2" destino="q_PM3" simbolo="9"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="0"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="1"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="2"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="3"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="4"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="5"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="6"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="7"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="8"/>
+		<elemento origem="q_PM3" destino="q_PM_FIM" simbolo="9"/>
+		<elemento origem="q_PM_FIM" destino="F_PLACA_MER" simbolo=" "/>
+		<elemento origem="q_PM_FIM" destino="F_PLACA_MER" simbolo="\n"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="0"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="1"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="2"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="3"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="4"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="5"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="6"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="7"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="8"/>
+		<elemento origem="q_REG0" destino="q_REG1" simbolo="9"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="0"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="1"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="2"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="3"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="4"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="5"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="6"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="7"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="8"/>
+		<elemento origem="q_REG1" destino="q_REG2" simbolo="9"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="0"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="1"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="2"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="3"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="4"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="5"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="6"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="7"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="8"/>
+		<elemento origem="q_REG2" destino="q_REG3" simbolo="9"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="0"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="1"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="2"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="3"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="4"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="5"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="6"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="7"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="8"/>
+		<elemento origem="q_REG3" destino="q_REG4" simbolo="9"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="0"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="1"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="2"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="3"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="4"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="5"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="6"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="7"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="8"/>
+		<elemento origem="q_REG4" destino="q_REG5" simbolo="9"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="0"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="1"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="2"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="3"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="4"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="5"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="6"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="7"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="8"/>
+		<elemento origem="q_REG5" destino="q_REG6" simbolo="9"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="0"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="1"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="2"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="3"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="4"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="5"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="6"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="7"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="8"/>
+		<elemento origem="q_REG6" destino="q_REG7" simbolo="9"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="0"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="1"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="2"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="3"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="4"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="5"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="6"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="7"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="8"/>
+		<elemento origem="q_REG7" destino="q_REG8" simbolo="9"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="0"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="1"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="2"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="3"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="4"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="5"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="6"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="7"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="8"/>
+		<elemento origem="q_REG8" destino="q_REG_FIM" simbolo="9"/>
+		<elemento origem="q_REG_FIM" destino="F_REGISTRO" simbolo=" "/>
+		<elemento origem="q_REG_FIM" destino="F_REGISTRO" simbolo="\n"/>
+		<elemento origem="q_RS" destino="q_VAL_Z" simbolo="0"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="1"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="2"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="3"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="4"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="5"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="6"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="7"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="8"/>
+		<elemento origem="q_RS" destino="q_VI1" simbolo="9"/>
+		<elemento origem="q_VAL_Z" destino="q_VAL_P" simbolo=","/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="0"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="1"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="2"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="3"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="4"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="5"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="6"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="7"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="8"/>
+		<elemento origem="q_VI1" destino="q_VI2" simbolo="9"/>
+		<elemento origem="q_VI1" destino="q_VM0" simbolo="."/>
+		<elemento origem="q_VI1" destino="q_VAL_P" simbolo=","/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="0"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="1"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="2"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="3"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="4"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="5"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="6"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="7"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="8"/>
+		<elemento origem="q_VI2" destino="q_VI3" simbolo="9"/>
+		<elemento origem="q_VI2" destino="q_VM0" simbolo="."/>
+		<elemento origem="q_VI2" destino="q_VAL_P" simbolo=","/>
+		<elemento origem="q_VI3" destino="q_VM0" simbolo="."/>
+		<elemento origem="q_VI3" destino="q_VAL_P" simbolo=","/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="0"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="1"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="2"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="3"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="4"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="5"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="6"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="7"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="8"/>
+		<elemento origem="q_VM0" destino="q_VM1" simbolo="9"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="0"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="1"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="2"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="3"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="4"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="5"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="6"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="7"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="8"/>
+		<elemento origem="q_VM1" destino="q_VM2" simbolo="9"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="0"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="1"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="2"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="3"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="4"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="5"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="6"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="7"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="8"/>
+		<elemento origem="q_VM2" destino="q_VI3" simbolo="9"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="0"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="1"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="2"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="3"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="4"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="5"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="6"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="7"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="8"/>
+		<elemento origem="q_VAL_P" destino="q_VAL_D1" simbolo="9"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="0"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="1"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="2"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="3"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="4"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="5"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="6"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="7"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="8"/>
+		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="9"/>
+		<elemento origem="q_VAL_FIM" destino="F_VALOR" simbolo=" "/>
+		<elemento origem="q_VAL_FIM" destino="F_VALOR" simbolo="\n"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="0"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="1"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="2"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="3"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="4"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="5"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="6"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="7"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="8"/>
+		<elemento origem="q_D01" destino="q_HH" simbolo="9"/>
+		<elemento origem="q_D01" destino="q_VK" simbolo="k"/>
+		<elemento origem="q_D2" destino="q_HH" simbolo="0"/>
+		<elemento origem="q_D2" destino="q_HH" simbolo="1"/>
+		<elemento origem="q_D2" destino="q_HH" simbolo="2"/>
+		<elemento origem="q_D2" destino="q_HH" simbolo="3"/>
+		<elemento origem="q_D2" destino="q_VEL_D" simbolo="4"/>
+		<elemento origem="q_D2" destino="q_VEL_D" simbolo="5"/>
+		<elemento origem="q_D2" destino="q_VEL_D" simbolo="6"/>
+		<elemento origem="q_D2" destino="q_VEL_D" simbolo="7"/>
+		<elemento origem="q_D2" destino="q_VEL_D" simbolo="8"/>
+		<elemento origem="q_D2" destino="q_VEL_D" simbolo="9"/>
+		<elemento origem="q_D2" destino="q_VK" simbolo="k"/>
+		<elemento origem="q_HH" destino="q_H_DP" simbolo=":"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="0"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="1"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="2"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="3"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="4"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="5"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="6"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="7"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="8"/>
+		<elemento origem="q_HH" destino="q_VEL_D" simbolo="9"/>
+		<elemento origem="q_HH" destino="q_VK" simbolo="k"/>
+		<elemento origem="q_H_DP" destino="q_H_M1" simbolo="0"/>
+		<elemento origem="q_H_DP" destino="q_H_M1" simbolo="1"/>
+		<elemento origem="q_H_DP" destino="q_H_M1" simbolo="2"/>
+		<elemento origem="q_H_DP" destino="q_H_M1" simbolo="3"/>
+		<elemento origem="q_H_DP" destino="q_H_M1" simbolo="4"/>
+		<elemento origem="q_H_DP" destino="q_H_M1" simbolo="5"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="0"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="1"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="2"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="3"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="4"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="5"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="6"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="7"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="8"/>
+		<elemento origem="q_H_M1" destino="q_HORA_FIM" simbolo="9"/>
+		<elemento origem="q_HORA_FIM" destino="F_HORARIO" simbolo=" "/>
+		<elemento origem="q_HORA_FIM" destino="F_HORARIO" simbolo="\n"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="0"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="1"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="2"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="3"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="4"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="5"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="6"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="7"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="8"/>
+		<elemento origem="q_VEL_D" destino="q_VEL_D" simbolo="9"/>
+		<elemento origem="q_VEL_D" destino="q_VK" simbolo="k"/>
+		<elemento origem="q_VK" destino="q_VKM" simbolo="m"/>
+		<elemento origem="q_VKM" destino="q_VBAR" simbolo="/"/>
+		<elemento origem="q_VBAR" destino="q_VEL_FIM" simbolo="h"/>
+		<elemento origem="q_VEL_FIM" destino="F_VELOCIDADE" simbolo=" "/>
+		<elemento origem="q_VEL_FIM" destino="F_VELOCIDADE" simbolo="\n"/>
+	</funcaoPrograma>
+
+	<estadoInicial valor="1"/>
+
+</AFD>
