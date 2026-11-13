@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador Léxico Web</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-conteudo">
+            <h1>Analisador Léxico Web</h1>
+            <p class="navbar-descricao">
+                São consideradas palavras válidas aquelas compostas por placas veiculares (padrão antigo ou Mercosul), códigos RENAVAM, horários válidos (HH:MM), leituras de velocidade (km/h) e valores monetários (R$).
+            </p>
+        </div>
+    </header>
+
+    <main class="container fluxo-principal">
+        <section class="card">
+            <div class="card-cabecalho">
+                <h2>Funcionamento do Autômato (AFD)</h2>
+                <span class="tag-afd" id="nome-afd-ativo">AFD Padrão</span>
+            </div>
+
+            <div class="diagrama-container">
+                <svg class="svg-afd" viewBox="0 0 1080 510" role="img" aria-label="Diagrama de estados do Autômato Finito Determinístico">
+                    <defs>
+                        <marker id="seta-afd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#475569" />
+                        </marker>
+                        <marker id="seta-aceita" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#15803d" />
+                        </marker>
+                    </defs>
+
+                    <line x1="10" y1="250" x2="44" y2="250" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="26" y="238" class="afd-rotulo-inicio">Início</text>
+
+                    <line x1="78" y1="232" x2="153" y2="94" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="108" y="152" class="afd-rotulo">A–Z \ {R}</text>
+                    <line x1="171" y1="82" x2="227" y2="82" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="199" y="74" class="afd-rotulo">A–Z</text>
+                    <line x1="251" y1="82" x2="307" y2="82" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="279" y="74" class="afd-rotulo">A–Z</text>
+
+                    <line x1="330" y1="77" x2="388" y2="51" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="355" y="56" class="afd-rotulo">-</text>
+                    <line x1="411" y1="46" x2="467" y2="46" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="439" y="38" class="afd-rotulo">0–9</text>
+                    <line x1="491" y1="46" x2="547" y2="46" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="519" y="38" class="afd-rotulo">0–9</text>
+                    <line x1="571" y1="46" x2="627" y2="46" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="599" y="38" class="afd-rotulo">0–9</text>
+                    <line x1="651" y1="46" x2="700" y2="46" class="afd-aresta afd-aresta-aceita" marker-end="url(#seta-aceita)" />
+                    <text x="675" y="38" class="afd-rotulo">0–9</text>
+
+                    <line x1="330" y1="87" x2="388" y2="113" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="355" y="110" class="afd-rotulo">0–9</text>
+                    <line x1="411" y1="118" x2="467" y2="118" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="439" y="110" class="afd-rotulo">A–Z</text>
+                    <line x1="491" y1="118" x2="547" y2="118" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="519" y="110" class="afd-rotulo">0–9</text>
+                    <line x1="571" y1="118" x2="620" y2="118" class="afd-aresta afd-aresta-aceita" marker-end="url(#seta-aceita)" />
+                    <text x="595" y="110" class="afd-rotulo">0–9</text>
+
+                    <line x1="86" y1="242" x2="148" y2="215" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="116" y="222" class="afd-rotulo">R</text>
+                    <line x1="166" y1="201" x2="233" y2="93" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="190" y="147" class="afd-rotulo">A–Z</text>
+                    <line x1="171" y1="210" x2="227" y2="210" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="199" y="202" class="afd-rotulo">$</text>
+                    <line x1="251" y1="210" x2="307" y2="210" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="279" y="202" class="afd-rotulo">1–9</text>
+                    <line x1="331" y1="210" x2="387" y2="210" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="359" y="202" class="afd-rotulo">0–9</text>
+                    <line x1="411" y1="210" x2="467" y2="210" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="439" y="202" class="afd-rotulo">0–9</text>
+
+                    <line x1="251" y1="212" x2="387" y2="239" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="318" y="235" class="afd-rotulo">0</text>
+                    <line x1="411" y1="240" x2="547" y2="213" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="479" y="236" class="afd-rotulo">,</text>
+
+                    <line x1="320" y1="199" x2="320" y2="171" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="311" y="186" class="afd-rotulo">.</text>
+                    <line x1="391" y1="203" x2="330" y2="165" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="359" y="179" class="afd-rotulo">.</text>
+                    <path d="M 471 204 Q 415 184 331 162" fill="none" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="412" y="182" class="afd-rotulo">.</text>
+                    <line x1="331" y1="158" x2="387" y2="158" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="359" y="150" class="afd-rotulo">0–9</text>
+                    <line x1="411" y1="158" x2="467" y2="158" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="439" y="150" class="afd-rotulo">0–9</text>
+                    <line x1="480" y1="169" x2="480" y2="197" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="492" y="186" class="afd-rotulo">0–9</text>
+
+                    <line x1="491" y1="210" x2="547" y2="210" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="519" y="202" class="afd-rotulo">,</text>
+                    <line x1="571" y1="210" x2="627" y2="210" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="599" y="202" class="afd-rotulo">0–9</text>
+                    <line x1="651" y1="210" x2="700" y2="210" class="afd-aresta afd-aresta-aceita" marker-end="url(#seta-aceita)" />
+                    <text x="675" y="202" class="afd-rotulo">0–9</text>
+
+                    <line x1="87" y1="256" x2="148" y2="276" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="118" y="260" class="afd-rotulo">#</text>
+                    <line x1="171" y1="280" x2="227" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="199" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="251" y1="280" x2="307" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="279" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="331" y1="280" x2="387" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="359" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="411" y1="280" x2="467" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="439" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="491" y1="280" x2="547" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="519" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="571" y1="280" x2="627" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="599" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="651" y1="280" x2="707" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="679" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="731" y1="280" x2="787" y2="280" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="759" y="272" class="afd-rotulo">0–9</text>
+                    <line x1="811" y1="280" x2="860" y2="280" class="afd-aresta afd-aresta-aceita" marker-end="url(#seta-aceita)" />
+                    <text x="835" y="272" class="afd-rotulo">0–9</text>
+
+                    <line x1="82" y1="264" x2="151" y2="336" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="122" y="298" class="afd-rotulo">0–1</text>
+                    <line x1="78" y1="267" x2="153" y2="391" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="121" y="345" class="afd-rotulo">2</text>
+                    <path d="M 74 270 Q 130 450 236 450" fill="none" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="145" y="437" class="afd-rotulo">3–9</text>
+
+                    <line x1="171" y1="345" x2="237" y2="345" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="204" y="337" class="afd-rotulo">0–9</text>
+                    <line x1="169" y1="396" x2="239" y2="352" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="200" y="369" class="afd-rotulo">0–3</text>
+                    <line x1="170" y1="407" x2="239" y2="444" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="211" y="421" class="afd-rotulo">4–9</text>
+
+                    <line x1="261" y1="345" x2="327" y2="345" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="294" y="337" class="afd-rotulo">:</text>
+                    <line x1="351" y1="345" x2="407" y2="345" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="379" y="337" class="afd-rotulo">0–5</text>
+                    <line x1="431" y1="345" x2="480" y2="345" class="afd-aresta afd-aresta-aceita" marker-end="url(#seta-aceita)" />
+                    <text x="455" y="337" class="afd-rotulo">0–9</text>
+
+                    <line x1="250" y1="356" x2="250" y2="437" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="250" y="398" class="afd-rotulo">0–9</text>
+                    <line x1="257" y1="354" x2="332" y2="440" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="301" y="393" class="afd-rotulo">k</text>
+
+                    <path d="M 244.5 459.5 C 234 489, 266 489, 255.5 459.5" fill="none" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="250" y="493" class="afd-rotulo">0–9</text>
+                    <line x1="261" y1="450" x2="327" y2="450" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="294" y="442" class="afd-rotulo">k</text>
+                    <line x1="351" y1="450" x2="407" y2="450" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="379" y="442" class="afd-rotulo">m</text>
+                    <line x1="431" y1="450" x2="487" y2="450" class="afd-aresta" marker-end="url(#seta-afd)" />
+                    <text x="459" y="442" class="afd-rotulo">/</text>
+                    <line x1="511" y1="450" x2="560" y2="450" class="afd-aresta afd-aresta-aceita" marker-end="url(#seta-aceita)" />
+                    <text x="535" y="442" class="afd-rotulo">h</text>
+
+                    <circle cx="68" cy="250" r="20" class="afd-no afd-no-inicial" />
+                    <text x="68" y="255" class="afd-no-texto">q0</text>
+
+                    <circle cx="160" cy="82" r="11" class="afd-no" />
+                    <circle cx="240" cy="82" r="11" class="afd-no" />
+                    <circle cx="320" cy="82" r="11" class="afd-no" />
+
+                    <circle cx="400" cy="46" r="11" class="afd-no" />
+                    <circle cx="480" cy="46" r="11" class="afd-no" />
+                    <circle cx="560" cy="46" r="11" class="afd-no" />
+                    <circle cx="640" cy="46" r="11" class="afd-no" />
+
+                    <circle cx="400" cy="118" r="11" class="afd-no" />
+                    <circle cx="480" cy="118" r="11" class="afd-no" />
+                    <circle cx="560" cy="118" r="11" class="afd-no" />
+
+                    <circle cx="160" cy="210" r="11" class="afd-no" />
+                    <circle cx="240" cy="210" r="11" class="afd-no" />
+                    <circle cx="320" cy="210" r="11" class="afd-no" />
+                    <circle cx="400" cy="210" r="11" class="afd-no" />
+                    <circle cx="480" cy="210" r="11" class="afd-no" />
+                    <circle cx="400" cy="242" r="11" class="afd-no" />
+                    <circle cx="320" cy="158" r="11" class="afd-no" />
+                    <circle cx="400" cy="158" r="11" class="afd-no" />
+                    <circle cx="480" cy="158" r="11" class="afd-no" />
+                    <circle cx="560" cy="210" r="11" class="afd-no" />
+                    <circle cx="640" cy="210" r="11" class="afd-no" />
+
+                    <circle cx="160" cy="280" r="11" class="afd-no" />
+                    <circle cx="240" cy="280" r="11" class="afd-no" />
+                    <circle cx="320" cy="280" r="11" class="afd-no" />
+                    <circle cx="400" cy="280" r="11" class="afd-no" />
+                    <circle cx="480" cy="280" r="11" class="afd-no" />
+                    <circle cx="560" cy="280" r="11" class="afd-no" />
+                    <circle cx="640" cy="280" r="11" class="afd-no" />
+                    <circle cx="720" cy="280" r="11" class="afd-no" />
+                    <circle cx="800" cy="280" r="11" class="afd-no" />
+
+                    <circle cx="160" cy="345" r="11" class="afd-no" />
+                    <circle cx="160" cy="402" r="11" class="afd-no" />
+                    <circle cx="250" cy="345" r="11" class="afd-no" />
+                    <circle cx="340" cy="345" r="11" class="afd-no" />
+                    <circle cx="420" cy="345" r="11" class="afd-no" />
+
+                    <circle cx="250" cy="450" r="11" class="afd-no" />
+                    <circle cx="340" cy="450" r="11" class="afd-no" />
+                    <circle cx="420" cy="450" r="11" class="afd-no" />
+                    <circle cx="500" cy="450" r="11" class="afd-no" />
+
+                    <circle cx="720" cy="46" r="18" class="afd-no afd-no-final" />
+                    <circle cx="720" cy="46" r="13" class="afd-no-final-anel" />
+                    <text x="750" y="50" class="afd-categoria">Placa Antiga (AAA-0000)</text>
+
+                    <circle cx="640" cy="118" r="18" class="afd-no afd-no-final" />
+                    <circle cx="640" cy="118" r="13" class="afd-no-final-anel" />
+                    <text x="670" y="122" class="afd-categoria">Placa Mercosul (AAA0A00)</text>
+
+                    <circle cx="720" cy="210" r="18" class="afd-no afd-no-final" />
+                    <circle cx="720" cy="210" r="13" class="afd-no-final-anel" />
+                    <text x="750" y="214" class="afd-categoria">Valor (R$1.000.000,98)</text>
+
+                    <circle cx="880" cy="280" r="18" class="afd-no afd-no-final" />
+                    <circle cx="880" cy="280" r="13" class="afd-no-final-anel" />
+                    <text x="910" y="284" class="afd-categoria">RENAVAM (#9 dígitos)</text>
+
+                    <circle cx="500" cy="345" r="18" class="afd-no afd-no-final" />
+                    <circle cx="500" cy="345" r="13" class="afd-no-final-anel" />
+                    <text x="530" y="349" class="afd-categoria">Horário (00:00–23:59)</text>
+
+                    <circle cx="580" cy="450" r="18" class="afd-no afd-no-final" />
+                    <circle cx="580" cy="450" r="13" class="afd-no-final-anel" />
+                    <text x="610" y="454" class="afd-categoria">Velocidade (km/h)</text>
+                </svg>
+
+                <div class="svg-legenda">
+                    <span><i class="legenda-bolinha legenda-inicio"></i>Estado inicial</span>
+                    <span><i class="legenda-bolinha legenda-meio"></i>Estado intermediário</span>
+                    <span><i class="legenda-bolinha legenda-fim"></i>Estado final (aceitação)</span>
+                </div>
+            </div>
+
+            <div class="grade-categorias">
+                <article class="categoria-card">
+                    <div class="categoria-topo">
+                        <strong>Placa Antiga</strong>
+                        <code class="exemplo-tag">ABC-1234</code>
+                    </div>
+                    <div class="passos-pilulas">
+                        <span class="pilula">3 Letras</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">-</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula pilula-fim">4 Dígitos</span>
+                    </div>
+                </article>
+
+                <article class="categoria-card">
+                    <div class="categoria-topo">
+                        <strong>Placa Mercosul</strong>
+                        <code class="exemplo-tag">BRA2E19</code>
+                    </div>
+                    <div class="passos-pilulas">
+                        <span class="pilula">3 Letras</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">1 Dígito</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">1 Letra</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula pilula-fim">2 Dígitos</span>
+                    </div>
+                </article>
+
+                <article class="categoria-card">
+                    <div class="categoria-topo">
+                        <strong>Código RENAVAM</strong>
+                        <code class="exemplo-tag">#123456789</code>
+                    </div>
+                    <div class="passos-pilulas">
+                        <span class="pilula">#</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula pilula-fim">9 Dígitos</span>
+                    </div>
+                </article>
+
+                <article class="categoria-card">
+                    <div class="categoria-topo">
+                        <strong>Horário Válido</strong>
+                        <code class="exemplo-tag">14:30</code>
+                    </div>
+                    <div class="passos-pilulas">
+                        <span class="pilula">00–23</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">:</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula pilula-fim">00–59</span>
+                    </div>
+                </article>
+
+                <article class="categoria-card">
+                    <div class="categoria-topo">
+                        <strong>Velocidade</strong>
+                        <code class="exemplo-tag">80km/h</code>
+                    </div>
+                    <div class="passos-pilulas">
+                        <span class="pilula">Dígitos (0–9)</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula pilula-fim">km/h</span>
+                    </div>
+                </article>
+
+                <article class="categoria-card">
+                    <div class="categoria-topo">
+                        <strong>Valor Monetário</strong>
+                        <code class="exemplo-tag">R$1.000.000,98</code>
+                    </div>
+                    <div class="passos-pilulas">
+                        <span class="pilula">R$</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">1–3 Dígitos</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">.000 (×N)</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula">,</span>
+                        <span class="seta-pilula">→</span>
+                        <span class="pilula pilula-fim">2 Dígitos</span>
+                    </div>
+                </article>
+            </div>
+
+            <details class="detalhe-discreto">
+                <summary>Ver / Carregar arquivo AFD.XML</summary>
+                <div class="detalhe-conteudo">
+                    <div class="acoes-xml">
+                        <label for="upload-xml" class="btn btn-secundario">Carregar outro AFD.XML</label>
+                        <input type="file" id="upload-xml" accept=".xml,text/xml" hidden>
+                        <button type="button" class="btn btn-secundario" id="btn-restaurar-afd">Restaurar Padrão</button>
+                        <button type="button" class="btn btn-secundario" id="btn-copiar-xml">Copiar XML</button>
+                    </div>
+                    <pre id="visualizacao-xml" class="bloco-console"></pre>
+                </div>
+            </details>
+        </section>
+
+        <section class="card">
+            <div class="card-cabecalho">
+                <h2>Exemplo Prático e Teste do Analisador</h2>
+                <div class="grupo-botoes-inline">
+                    <button type="button" class="btn btn-secundario" id="btn-exemplo-valido">Exemplo Válido</button>
+                    <button type="button" class="btn btn-secundario" id="btn-exemplo-erro">Exemplo com Erro</button>
+                    <label for="upload-txt" class="btn btn-secundario">Carregar .txt</label>
+                    <input type="file" id="upload-txt" accept=".txt,text/plain" hidden>
+                </div>
+            </div>
+
+            <label for="entrada-texto" class="rotulo-campo">Palavras para Análise (separadas por espaço ou quebra de linha)</label>
+            <textarea id="entrada-texto" class="campo-entrada" rows="3" spellcheck="false" placeholder="Ex.: ABC-1234 BRA2E19 #123456789 14:30 80km/h R$1.000.000,98"></textarea>
+
+            <div class="barra-acoes">
+                <button type="button" class="btn btn-primario" id="btn-analisar">Analisar</button>
+                <button type="button" class="btn btn-limpar" id="btn-limpar">Limpar</button>
+                <span id="status-resumo" class="resumo-linha"></span>
+            </div>
+
+            <div class="tabela-wrapper">
+                <table class="tabela-resultado">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Palavra</th>
+                            <th>Categoria</th>
+                            <th>Caminho de Estados (AFD)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela-tokens">
+                        <tr>
+                            <td colspan="5" class="vazio">Clique em "Analisar" para visualizar os tokens reconhecidos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <details class="detalhe-discreto">
+                <summary>Saída do Console — Principal.java</summary>
+                <div class="detalhe-conteudo">
+                    <pre id="saida-console" class="bloco-console"></pre>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <script src="src/afds/Simbolo.js"></script>
+    <script src="src/afds/Estado.js"></script>
+    <script src="src/afds/TransicaoD.js"></script>
+    <script src="src/afds/ConjuntoSimbolo.js"></script>
+    <script src="src/afds/ConjuntoEstados.js"></script>
+    <script src="src/afds/ConjuntoTransicaoD.js"></script>
+    <script src="src/afds/AFD.js"></script>
+
+    <script src="src/lexico/afdXml.js"></script>
+    <script src="src/lexico/Principal.js"></script>
+
+    <script src="src/ui/app.js"></script>
+</body>
+</html>
