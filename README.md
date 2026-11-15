@@ -6,3 +6,5 @@ Trabalho desenvolvido para a disciplina Linguagens Formais e Autômatos.
 
 - **Aluno:** Mickaell de Oliveira
 - **Matrícula:** 202365514B
+- **Aluno:** Felipe Gotelip Delgado
+- **Matrícula:** 202365501B
