@@ -87,7 +87,9 @@
 		<elemento valor="q_VAL_P"/>
 		<elemento valor="q_VAL_D1"/>
 		<elemento valor="q_VAL_FIM"/>
-		<elemento valor="q_D01"/>
+		<elemento valor="q_D0"/>
+		<elemento valor="q_H0"/>
+		<elemento valor="q_D1"/>
 		<elemento valor="q_D2"/>
 		<elemento valor="q_HH"/>
 		<elemento valor="q_H_DP"/>
@@ -145,8 +147,8 @@
 		<elemento origem="1" destino="q_L1" simbolo="Y"/>
 		<elemento origem="1" destino="q_L1" simbolo="Z"/>
 		<elemento origem="1" destino="q_REG0" simbolo="#"/>
-		<elemento origem="1" destino="q_D01" simbolo="0"/>
-		<elemento origem="1" destino="q_D01" simbolo="1"/>
+		<elemento origem="1" destino="q_D0" simbolo="0"/>
+		<elemento origem="1" destino="q_D1" simbolo="1"/>
 		<elemento origem="1" destino="q_D2" simbolo="2"/>
 		<elemento origem="1" destino="q_VEL_D" simbolo="3"/>
 		<elemento origem="1" destino="q_VEL_D" simbolo="4"/>
@@ -516,17 +518,29 @@
 		<elemento origem="q_VAL_D1" destino="q_VAL_FIM" simbolo="9"/>
 		<elemento origem="q_VAL_FIM" destino="F_VALOR" simbolo=" "/>
 		<elemento origem="q_VAL_FIM" destino="F_VALOR" simbolo="\n"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="0"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="1"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="2"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="3"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="4"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="5"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="6"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="7"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="8"/>
-		<elemento origem="q_D01" destino="q_HH" simbolo="9"/>
-		<elemento origem="q_D01" destino="q_VK" simbolo="k"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="0"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="1"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="2"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="3"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="4"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="5"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="6"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="7"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="8"/>
+		<elemento origem="q_D0" destino="q_H0" simbolo="9"/>
+		<elemento origem="q_D0" destino="q_VK" simbolo="k"/>
+		<elemento origem="q_H0" destino="q_H_DP" simbolo=":"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="0"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="1"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="2"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="3"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="4"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="5"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="6"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="7"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="8"/>
+		<elemento origem="q_D1" destino="q_HH" simbolo="9"/>
+		<elemento origem="q_D1" destino="q_VK" simbolo="k"/>
 		<elemento origem="q_D2" destino="q_HH" simbolo="0"/>
 		<elemento origem="q_D2" destino="q_HH" simbolo="1"/>
 		<elemento origem="q_D2" destino="q_HH" simbolo="2"/>

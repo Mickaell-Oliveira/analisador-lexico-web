@@ -8,7 +8,7 @@ const ESTADOS_DSL = [
     'q_PM1', 'q_PM2', 'q_PM3', 'q_PM_FIM',
     'q_REG0', 'q_REG1', 'q_REG2', 'q_REG3', 'q_REG4', 'q_REG5', 'q_REG6', 'q_REG7', 'q_REG8', 'q_REG_FIM',
     'q_RS', 'q_VAL_Z', 'q_VI1', 'q_VI2', 'q_VI3', 'q_VM0', 'q_VM1', 'q_VM2', 'q_VAL_P', 'q_VAL_D1', 'q_VAL_FIM',
-    'q_D01', 'q_D2', 'q_HH', 'q_H_DP', 'q_H_M1', 'q_HORA_FIM',
+    'q_D0', 'q_H0', 'q_D1', 'q_D2', 'q_HH', 'q_H_DP', 'q_H_M1', 'q_HORA_FIM',
     'q_VEL_D', 'q_VK', 'q_VKM', 'q_VBAR', 'q_VEL_FIM',
     'F_PLACA_ANT', 'F_PLACA_MER', 'F_REGISTRO', 'F_VELOCIDADE', 'F_VALOR', 'F_HORARIO'
 ];
@@ -88,7 +88,8 @@ function construirTransicoesDsl() {
     adicionarTransicao(t, '1', 'R', 'q_R');
     adicionarListaTransicoes(t, '1', LETRAS_MAIUSCULAS.filter((l) => l !== 'R'), 'q_L1');
     adicionarTransicao(t, '1', '#', 'q_REG0');
-    adicionarListaTransicoes(t, '1', ['0', '1'], 'q_D01');
+    adicionarTransicao(t, '1', '0', 'q_D0');
+    adicionarTransicao(t, '1', '1', 'q_D1');
     adicionarTransicao(t, '1', '2', 'q_D2');
     adicionarListaTransicoes(t, '1', ['3', '4', '5', '6', '7', '8', '9'], 'q_VEL_D');
 
@@ -147,8 +148,12 @@ function construirTransicoesDsl() {
     adicionarDelimitadores(t, 'q_VAL_FIM', 'F_VALOR');
 
     // Horario velocidade
-    adicionarListaTransicoes(t, 'q_D01', DIGITOS, 'q_HH');
-    adicionarTransicao(t, 'q_D01', 'k', 'q_VK');
+    adicionarListaTransicoes(t, 'q_D0', DIGITOS, 'q_H0');
+    adicionarTransicao(t, 'q_D0', 'k', 'q_VK');
+    adicionarTransicao(t, 'q_H0', ':', 'q_H_DP');
+
+    adicionarListaTransicoes(t, 'q_D1', DIGITOS, 'q_HH');
+    adicionarTransicao(t, 'q_D1', 'k', 'q_VK');
 
     adicionarListaTransicoes(t, 'q_D2', ['0', '1', '2', '3'], 'q_HH');
     adicionarListaTransicoes(t, 'q_D2', ['4', '5', '6', '7', '8', '9'], 'q_VEL_D');
